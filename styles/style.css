@@ -5,14 +5,47 @@ body{
     font-family: 'Poppins', sans-serif;
     background-color: #F3F1FF;
 }
+header{
+    background-color: #562EFF;
+    width: 1440px;
+    height: 94px;
+    
+    
+    
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+
+nav span a{
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 25px;
+
+}
+span img{
+    width: 51px;
+    height: 51px;
+
+}
+
 main{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 .container{
     background-color:#FFFFFF ;
     width: 870px;
     padding: 30px;
+    margin-top: 21px;
+    border: 5px;
 
 }
 hr{
@@ -58,6 +91,7 @@ hr{
 
 .blog{
     display: flex;
+    
 }
 
 .blog .thumbnail img{
@@ -67,6 +101,7 @@ hr{
 }
 .blog-info{
     margin: 16px;
+    
 }
 .blog-title{
     font-size: 20px;
@@ -81,4 +116,80 @@ hr{
     font-size: 16px;
     text-decoration: none;
 
+}
+
+/* courses styles */
+.courses{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 25px;
+}
+.course .course-banner img{
+    width: 224px;
+    height: 104px;
+}
+.course-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fa-star{
+    font-size: 12px;
+}
+.fa-star.filled{
+    color: #FFC014;
+    ;
+}
+.fa-star.empty{
+    color: #AEAEAE;
+    ;
+
+}
+.course-info span{
+    font-size: 15px;
+    font-weight: 400;
+    color: #A2A2A2;
+}
+.course-duration{
+    color: #FF4A60;
+    background-color: #FFE4E8;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+/* media quesries */
+
+/* mobile devices */
+@media only screen and (max-width:688px) {
+
+    .container{
+        width: 100%;
+    }
+
+    .players, .blogs, .courses{
+        
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .player, .blog, .course{
+        flex-direction: column;
+    }
+}
+
+/*---------------
+ tablet devices 
+----------------*/
+@media only screen and (min-width:689px) and (max-width:991px) {
+    .container{
+        width: 100%;
+    }
+    .players,  .courses{
+        
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .blogs{
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+    
 }
